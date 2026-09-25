@@ -1,0 +1,268 @@
+:root {
+    --color-principal: #6366f1;
+    --color-principal-hover: #4f46e5;
+    --color-error: #ef4444;
+    --color-exitoso: #22c55e;
+
+    --color-fondo: #0f172a;
+
+    --color-borde: rgba(255, 255, 255, 0.1);
+
+    --color-texto: #ffffff;
+    --color-texto-secundario: #cbd5e1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+
+    background: var(--color-fondo);
+
+    color: var(--color-texto);
+
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* CONTENEDOR */
+
+.contenedor-principal {
+    width: 350px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(10px);
+
+    padding: 2rem;
+
+    border-radius: 15px;
+
+    border: 1px solid var(--color-borde);
+}
+
+
+/* FORMULARIOS */
+
+.formulario h2 {
+    text-align: center;
+
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+
+/* INPUTS */
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+input {
+    width: 100%;
+
+    padding: 12px;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    border: 2px solid transparent;
+
+    border-radius: 6px;
+
+    color: white;
+
+    font-size: 0.95rem;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: var(--color-texto-secundario);
+}
+
+input:focus {
+    outline: none;
+
+    border-color: var(--color-principal);
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+form button {
+    width: 100%;
+
+    padding: 12px;
+
+    background: var(--color-principal);
+
+    border: none;
+
+    color: white;
+
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+form button:hover {
+    background: var(--color-principal-hover);
+}
+
+
+/* CAMBIAR ENTRE LOGIN Y REGISTRO */
+
+.cambiar-formulario {
+    text-align: center;
+
+    font-size: 0.8rem;
+
+    color: var(--color-texto-secundario);
+
+    margin: 18px 0 0;
+}
+
+.cambiar-formulario button {
+    width: auto;
+
+    padding: 0;
+
+    margin-left: 3px;
+
+    background: none;
+
+    border: none;
+
+    color: var(--color-principal);
+
+    font-size: 0.8rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.cambiar-formulario button:hover {
+    text-decoration: underline;
+
+    background: none;
+}
+
+
+/* OCULTAR FORMULARIO */
+
+.oculto {
+    display: none;
+}
+
+
+/* MENSAJE */
+
+#mensaje {
+    text-align: center;
+
+    font-size: 0.85rem;
+
+    min-height: 18px;
+
+    margin: 15px 0;
+}
+
+
+/* RECURSO PROTEGIDO */
+
+.seccion-protegida {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--color-borde);
+
+    text-align: center;
+}
+
+.seccion-protegida h3 {
+    margin-top: 0;
+
+    font-size: 1rem;
+}
+
+
+/* BOTONES DEL RECURSO */
+
+.seccion-protegida > button {
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: 8px;
+
+    border-radius: 6px;
+
+    border: none;
+
+    background: var(--color-principal);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.seccion-protegida > button:hover {
+    background: var(--color-principal-hover);
+}
+
+
+/* CERRAR SESIÓN */
+
+#cerrar-sesion {
+    background: transparent;
+
+    border: 1px solid var(--color-error);
+
+    color: var(--color-error);
+}
+
+#cerrar-sesion:hover {
+    background: var(--color-error);
+    color: white;
+}
+
+
+/* MENSAJE PROTEGIDO */
+
+#mensaje-protegido {
+    font-size: 0.8rem;
+
+    min-height: 18px;
+
+    margin-bottom: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 400px) {
+
+    .contenedor-principal {
+        width: 100%;
+    }
+}
